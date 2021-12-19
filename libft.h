@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:50:36 by hlim              #+#    #+#             */
-/*   Updated: 2021/12/15 17:34:26 by hlim             ###   ########.fr       */
+/*   Updated: 2021/12/15 19:08:52 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 #include <string.h>
-#include <stlib.h>
+#include <stdlib.h>
 #include <unistd.h>
 
 int	ft_atoi(const char *str);
@@ -27,9 +27,6 @@ int	ft_isupper(char ch);
 int	ft_memcmp(const void *str1, const void *str2, size_t size);
 int	ft_strlen(char *str);
 int	ft_strncmp(char *s1, char *s2, unsigned int n);
-void	*ft_memchr(const void *s, int ch, size_t nb);
-void	*ft_memchr(const void *s, int ch, size_t nb);
-void	*ft_memchr(const void *s, int ch, size_t nb);
 void	*ft_memchr(const void *s, int ch, size_t nb);
 void	ft_bzero(void *ptr, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
