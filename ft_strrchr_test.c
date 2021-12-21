@@ -1,42 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 12:32:43 by hlim              #+#    #+#             */
-/*   Updated: 2021/12/02 13:03:03 by hlim             ###   ########.fr       */
+/*   Updated: 2021/12/15 21:30:06 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
-int	ft_strlen(const char *str)
-{
-	int	nb;
-
-	nb = 0;
-	while (*str++)
-		nb++;
-	return (nb);
-}
-
-const char	*ft_strrchr(const char *str, int ch)
-{
-	char	*ptr;
-	int	len;
-
-	ptr = (char *)str;
-	len = ft_strlen(ptr);
-	while (len)
-	{
-		if (ptr[len] == ch)
-			return (ptr + len);
-		len--;
-	}
-	return (NULL);
-}
+char	*ft_strrchr(const char *str, int ch);
+int	ft_strlen(char *str);
 
 int	main(void)
 {
@@ -52,4 +30,3 @@ int	main(void)
 
 	return (0);
 }
-
