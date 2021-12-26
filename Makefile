@@ -6,7 +6,7 @@
 #    By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/24 20:16:33 by hlim              #+#    #+#              #
-#    Updated: 2021/12/25 19:13:26 by hlim             ###   ########.fr        #
+#    Updated: 2021/12/26 23:24:12 by hlim             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,10 @@ CFLAG = -Wall -Wextra -Werror
 
 RM = rm -f
 
+AR = ar
+ARFAlAGS = crs
+
+INCLUDE = ./libft.h
 
 
 
