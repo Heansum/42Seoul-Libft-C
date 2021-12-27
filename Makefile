@@ -6,7 +6,7 @@
 #    By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/24 20:16:33 by hlim              #+#    #+#              #
-#    Updated: 2021/12/26 23:24:12 by hlim             ###   ########.fr        #
+#    Updated: 2021/12/27 23:12:53 by hlim             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,5 +22,8 @@ ARFAlAGS = crs
 
 INCLUDE = ./libft.h
 
+SRCS = ft_atoi.c \
+       ft_bzero.c \
+       ft_idslphs.c \
 
 
