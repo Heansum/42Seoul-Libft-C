@@ -6,7 +6,7 @@
 #    By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/24 20:16:33 by hlim              #+#    #+#              #
-#    Updated: 2021/12/30 10:32:26 by hlim             ###   ########.fr        #
+#    Updated: 2021/12/31 16:18:23 by hlim             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CFLAG = -Wall -Wextra -Werror
 RM = rm -f
 
 AR = ar
-ARFAlAGS = crs
+ARFlAGS = crs
 
 INCLUDE = ./libft.h
 
@@ -51,5 +51,8 @@ SRCS = ft_atoi.c	\
 OBJ = $(SRCS:.c=.o)
 
 all : $(NAME)
+
+clean : 
+
 
 
