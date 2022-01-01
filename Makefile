@@ -6,7 +6,7 @@
 #    By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/24 20:16:33 by hlim              #+#    #+#              #
-#    Updated: 2021/12/31 16:18:23 by hlim             ###   ########.fr        #
+#    Updated: 2022/01/01 21:56:35 by hlim             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,11 +48,14 @@ SRCS = ft_atoi.c	\
        ft_tolower.c	\
        ft_touppser.c
 
-OBJ = $(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 all : $(NAME)
 
-clean : 
+clean :
+	$(RM) $(OBJS)
 
+fclean : clean
+	$(RM) $(NAME)
 
 
