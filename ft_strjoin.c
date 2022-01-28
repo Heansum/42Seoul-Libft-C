@@ -6,9 +6,11 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 20:03:21 by hlim              #+#    #+#             */
-/*   Updated: 2021/12/13 21:27:47 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/28 15:09:32 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

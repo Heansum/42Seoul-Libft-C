@@ -6,9 +6,11 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 18:17:15 by hlim              #+#    #+#             */
-/*   Updated: 2021/12/13 20:45:01 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/28 17:50:28 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

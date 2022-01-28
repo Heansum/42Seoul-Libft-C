@@ -6,11 +6,11 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 18:10:06 by hlim              #+#    #+#             */
-/*   Updated: 2021/12/21 15:30:44 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/28 15:12:18 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	tmp;
 

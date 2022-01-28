@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/12/24 20:16:33 by hlim              #+#    #+#              #
-#    Updated: 2022/01/06 12:45:59 by hlim             ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
 
 CC = gcc
@@ -47,11 +35,14 @@ SRCS = ft_atoi.c	\
        ft_strnstr.c	\
        ft_substr.c	\
        ft_tolower.c	\
-       ft_touppser.c
+       ft_toupper.c	\
 
 OBJS = $(SRCS:.c=.o)
 
 all : $(NAME)
+
+$(NAME) : $(OBJS)
+	    $(AR) $(ARFLAGS) $@ $^
 
 clean :
 	$(RM) $(OBJS)
@@ -62,3 +53,4 @@ fclean : clean
 %.o : %.c
 	$(CC) $(CFLAG) -c $< -o $@
 
+re : fclean all

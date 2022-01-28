@@ -6,13 +6,13 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 02:36:17 by hlim              #+#    #+#             */
-/*   Updated: 2021/12/24 02:48:50 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/28 15:09:10 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_ft(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	str;
 

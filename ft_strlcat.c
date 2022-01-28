@@ -6,9 +6,11 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 22:04:55 by hlim              #+#    #+#             */
-/*   Updated: 2021/12/08 22:43:08 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/28 15:16:58 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char	*dest, const char *src, size_t len)
 {
