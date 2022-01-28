@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr_test.c                                   :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 11:59:01 by hlim              #+#    #+#             */
-/*   Updated: 2021/12/02 12:32:13 by hlim             ###   ########.fr       */
+/*   Created: 2021/11/23 18:17:19 by hlim              #+#    #+#             */
+/*   Updated: 2022/01/28 21:40:24 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strchr(char *str, char c)
+void	*ft_memset(void *ptr, int value, unsigned int num)
 {
-	char	*ptr;
+	unsigned char	data;
+	unsigned char	*start_ptr;
 
-	ptr = str;
-	while (ptr != NULL)
-	{
-		if (ptr[0] == c)
-			return (ptr);
-		ptr++;
-	}
-	return (NULL);
+	start_ptr = (unsigned char *)ptr;
+	data = (unsigned char)value;
+	while (num-- > 0)
+		*start_ptr++ = data;
+	return (ptr);
 }
-
-int	main(void)
-{
-	char str[11] = "Hello World";
-	char *ptr;
-	
-	ptr = str;
-	printf("%s", ptr);
-	ptr = ft_strchr(str, 'o');
-	printf("%s", ptr);
-	
-	return (0);
-

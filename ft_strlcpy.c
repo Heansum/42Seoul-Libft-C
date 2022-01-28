@@ -6,13 +6,13 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 15:00:00 by hlim              #+#    #+#             */
-/*   Updated: 2022/01/28 15:22:48 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/28 21:48:43 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(const `char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(const char *dest, const char *src, size_t size)
 {
 	size_t		nb;
 	char		*ptr;

@@ -44,6 +44,8 @@ all : $(NAME)
 $(NAME) : $(OBJS)
 	    $(AR) $(ARFLAGS) $@ $^
 
+$(OBJS) : $(INCLUDE)
+
 clean :
 	$(RM) $(OBJS)
 
