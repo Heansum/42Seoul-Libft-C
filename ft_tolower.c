@@ -6,14 +6,13 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 15:50:12 by hlim              #+#    #+#             */
-/*   Updated: 2021/11/20 15:50:19 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/28 22:18:50 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int ch)
 {
-	if (ch >= 65 && ch <= 90)
-		return (ch + 32);
-	else
-		return (ch);
+	if ((ch >= 'A') && (ch <= 'Z'))
+		ch += 32;
+	return (ch);
 }

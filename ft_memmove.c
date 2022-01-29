@@ -6,11 +6,11 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 21:06:28 by hlim              #+#    #+#             */
-/*   Updated: 2022/01/28 21:39:01 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/28 22:24:45 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
