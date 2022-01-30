@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 15:09:15 by hlim              #+#    #+#             */
-/*   Updated: 2021/12/19 20:23:58 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/30 22:35:34 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 			rear--;
 		str = (char *)malloc(sizeof(char) * (rear - front + 1));
 		if (str)
-			ft_strlcpy(set, &s1[front], rear - front + 1);
+			ft_strlcpy(str, &s1[front], rear - front + 1);
 	}
 	return (str);
 }

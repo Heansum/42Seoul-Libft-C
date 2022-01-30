@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 20:03:21 by hlim              #+#    #+#             */
-/*   Updated: 2022/01/28 15:09:32 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/30 21:04:22 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ret = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
 	if (!ret)
 		return (NULL);
-	ft_memcpy(ret, s1, len_s1);
-	ft_memcpy(ret + len_s1, s2, len_s2);
-	ret[len_s1 + len_s2] = 0;
+	ft_strlcpy(ret, s1, len_s1 + 1);
+	ft_strlcat(ret, s2, len_s1 + len_s2 + 1);
 	return (ret);
 }
