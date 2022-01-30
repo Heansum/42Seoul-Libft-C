@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:50:36 by hlim              #+#    #+#             */
-/*   Updated: 2022/01/30 22:31:50 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/31 00:17:19 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void		*ft_calloc(size_t cnt, size_t size);
 
 char		*ft_strcpy(char *dest, char *src);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
-char		*ft_strchr(char const *str, char c);
+char		*ft_strchr(char const *str, int c);
 char		*ft_strrchr(const char *str, int ch);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 char		*ft_strtrim(char const *s1, char const *set);

@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 19:13:22 by hlim              #+#    #+#             */
-/*   Updated: 2022/01/28 22:20:59 by hlim             ###   ########.fr       */
+/*   Updated: 2022/01/31 02:39:40 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strrchr(const char *str, int ch)
 {
-	char	*ptr;
 	size_t	len;
 
-	ptr = (char *)str;
-	len = ft_strlen(ptr);
-	while (len)
+	len = ft_strlen(str);
+	if (ch == 0)
+		return ((char *)&str[len]);
+	while (len != 0)
 	{
-		if (ptr[len] == ch)
-			return (ptr + len);
+		if (str[len - 1] == (unsigned char)ch)
+			return ((char *)&str[len - 1]);
 		len--;
 	}
-	return (NULL);
+	return (0);
 }
