@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:50:36 by hlim              #+#    #+#             */
-/*   Updated: 2022/01/31 00:17:19 by hlim             ###   ########.fr       */
+/*   Updated: 2022/02/05 23:41:30 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <ctype.h>
+# include <stdio.h>
 
 int			ft_atoi(const char *str);
 int			ft_isalnum(int ch);
@@ -28,7 +30,7 @@ int			ft_isprint(int ch);
 int			ft_isupper(char ch);
 int			ft_memcmp(const void *str1, const void *str2, size_t size);
 int			ft_strlen(const char *str);
-int			ft_strncmp(char *s1, char *s2, unsigned int n);
+int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_toupper(int ch);
 int			ft_tolower(int ch);
 
