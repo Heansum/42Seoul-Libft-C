@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:50:36 by hlim              #+#    #+#             */
-/*   Updated: 2022/02/05 23:41:30 by hlim             ###   ########.fr       */
+/*   Updated: 2022/02/06 02:17:55 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ char		*ft_strrchr(const char *str, int ch);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strdup(const char *s1);
 
 size_t		ft_strlcat(char *dest, const char *src, size_t len);
 size_t		ft_strlcpy(char *dest, const char *src, size_t size);
