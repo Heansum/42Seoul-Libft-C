@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 14:24:55 by hlim              #+#    #+#             */
-/*   Updated: 2022/02/10 11:28:26 by hlim             ###   ########.fr       */
+/*   Updated: 2022/02/10 14:22:13 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,17 @@ static char	**do_free(char **s)
 {
 	size_t	i;
 
+	if (s == 0)
+		return (0);
 	i = 0;
-	while (s[i] != 0)
+	while (s[i])
 	{
 		free(s[i]);
 		i++;
 	}
-	free(s[i]);
-	return (0);
+	free(s);
+	s = NULL;
+	return (NULL);
 }
 
 static char	**do_split(char **str, char const *s, char c, size_t cnt)
@@ -34,15 +37,15 @@ static char	**do_split(char **str, char const *s, char c, size_t cnt)
 
 	i = 0;
 	j = 0;
-	while (s[i] != 0 && j < cnt)
+	while (s[i] && j < cnt)
 	{
 		if (s[i] != c)
 		{
 			next = i + 1;
-			while (s[next] != 0 && s[next] != c)
+			while (s[next] && s[next] != c)
 				next++;
 			str[j] = ft_substr(s, i, next - i);
-			if (str[j] == 0)
+			if (!str[j])
 				return (do_free(str));
 			j++;
 			i = next;
@@ -50,34 +53,48 @@ static char	**do_split(char **str, char const *s, char c, size_t cnt)
 		else
 			i++;
 	}
-	str[i] = 0;
+	str[j] = NULL;
 	return (str);
+}
+
+static int	ft_word_cnt(char const *s, char c)
+{
+	size_t	i;
+	size_t	cnt;
+
+	if (s == 0)
+		return (0);
+	i = 0;
+	cnt = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			cnt++;
+			while ((s[i] != c) && s[i])
+				i++;
+		}
+		else
+			i++;
+	}
+	return (cnt);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
 	size_t	word_cnt;
-	size_t	i;
 
-	if (s == 0)
+	if (!s)
 		return (NULL);
-	i = 0;
-	word_cnt = 0;
-	while (s[i] != 0)
-	{
-		if (s[i] != c)
-		{
-			word_cnt++;
-			while ((s[i] != c) && s[i] != 0)
-				i++;
-		}
-		else
-			i++;
-	}
+	word_cnt = ft_word_cnt(s, c);
 	str = (char **)malloc(sizeof(char *) * (word_cnt + 1));
-	if (str == 0)
-		return (0);
-	do_split(str, s, c, word_cnt);
-	return (str);
+	if (!str)
+		return (NULL);
+	if (word_cnt == 0)
+	{
+		str[word_cnt] = 0;
+		return (str);
+	}
+	return (do_split(str, s, c, word_cnt));
 }
