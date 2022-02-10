@@ -6,11 +6,13 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 18:10:06 by hlim              #+#    #+#             */
-/*   Updated: 2022/01/28 15:12:18 by hlim             ###   ########.fr       */
+/*   Updated: 2022/02/10 00:12:19 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	tmp;
 

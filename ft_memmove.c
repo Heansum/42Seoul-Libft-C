@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 21:06:28 by hlim              #+#    #+#             */
-/*   Updated: 2022/01/30 23:00:12 by hlim             ###   ########.fr       */
+/*   Updated: 2022/02/10 02:30:11 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char		*p_dest;
 	unsigned char		*p_src;
 
+	if (dest == 0 && src == 0)
+		return (0);
 	p_dest = (unsigned char *)dest;
 	p_src = (unsigned char *)src;
-	if (dest == 0 && src == 0)
-		return (dest);
 	if (dest < src)
 	{
 		while (n--)
