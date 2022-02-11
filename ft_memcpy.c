@@ -6,16 +6,16 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:36:15 by hlim              #+#    #+#             */
-/*   Updated: 2022/01/30 22:50:30 by hlim             ###   ########.fr       */
+/*   Updated: 2022/02/11 18:39:35 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t cnt)
 {
-	char		*tmp;
-	const char	*s;
+	unsigned char		*tmp;
+	unsigned const char	*s;
 
 	if (!dest && !src)
 		return (dest);

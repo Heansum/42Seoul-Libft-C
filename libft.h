@@ -6,19 +6,16 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:50:36 by hlim              #+#    #+#             */
-/*   Updated: 2022/02/10 00:11:39 by hlim             ###   ########.fr       */
+/*   Updated: 2022/02/11 18:15:24 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define  LIBFT_H
 
-# include <stddef.h>
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <ctype.h>
-# include <stdio.h>
 
 int			ft_atoi(const char *str);
 int			ft_isalnum(int ch);
