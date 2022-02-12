@@ -6,14 +6,13 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:50:36 by hlim              #+#    #+#             */
-/*   Updated: 2022/02/11 18:15:24 by hlim             ###   ########.fr       */
+/*   Updated: 2022/02/12 17:40:33 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define  LIBFT_H
 
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
 
