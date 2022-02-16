@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 16:50:36 by hlim              #+#    #+#             */
-/*   Updated: 2022/02/12 17:40:33 by hlim             ###   ########.fr       */
+/*   Updated: 2022/02/16 20:09:23 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}t_list;
 
 int			ft_atoi(const char *str);
 int			ft_isalnum(int ch);
