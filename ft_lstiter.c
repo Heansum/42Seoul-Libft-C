@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 15:13:14 by hlim              #+#    #+#             */
-/*   Updated: 2022/04/11 15:47:53 by hlim             ###   ########.fr       */
+/*   Updated: 2022/04/11 18:13:26 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		return ;
 	while (lst != 0)
 	{
-		f(lst->content);
+		(*f)(lst->content);
 		lst = lst->next;
 	}
 }

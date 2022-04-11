@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 15:09:57 by hlim              #+#    #+#             */
-/*   Updated: 2022/04/11 16:02:32 by hlim             ###   ########.fr       */
+/*   Updated: 2022/04/11 18:23:37 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new;
 
 	if (lst == 0)
-		return (0);
+		return (NULL);
 	result = 0;
 	while (lst)
 	{
@@ -26,7 +26,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (new == 0)
 		{
 			ft_lstclear(&result, del);
-			return (0);
+			return (NULL);
 		}
 		ft_lstadd_back(&result, new);
 		lst = lst->next;
