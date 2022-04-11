@@ -6,7 +6,7 @@ CFLAG = -Wall -Wextra -Werror
 RM = rm -f
 
 AR = ar
-ARFlAGS = crs
+ARFlAGS = rcus
 
 INCLUDE = ./libft.h
 
@@ -47,24 +47,43 @@ SRCS = ft_atoi.c	\
        ft_toupper.c	\
        ft_split.c
 
-OBJS = $(SRCS:.c=.o)
+SRCS_BONUS = ft_lstnew.c		\
+	     ft_lstadd_front.c		\
+	     ft_lstsize.c		\
+		ft_lstlast.c		\
+   		ft_lstmap.c		\
+		ft_lstadd_back.c	\
+		ft_lstdelone.c		\
+		ft_lstclear.c		\
+		ft_lstiter.c		
+
+OBJ = $(SRCS:.c=.o)
+
+OBJ_BONUS = $(SRCS_BONUS:.c=.o)
+
+ifdef BONUS
+	OBJS = $(OBJ) $(OBJ_BONUS)
+else
+	OBJS = $(OBJ)
+endif
 
 all : $(NAME)
 
-$(NAME) : $(OBJS)
-	    $(AR) $(ARFLAGS) $@ $^
+%.o : %.c $(INCLUDE)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJS) : $(INCLUDE)
+$(NAME): $(OBJS)
+	$(AR) $(ARFLAGS) $@ $^
 
 clean :
-	$(RM) $(OBJS)
+	$(RM) $(OBJ) $(OBJ_BONUS)
 
 fclean : clean
 	$(RM) $(NAME)
 
-%.o : %.c
-	$(CC) $(CFLAG) -c $< -o $@
-
 re : fclean all
 
-.PHONY: fclean all clean re
+bonus:
+	$(MAKE) BONUS=1 all
+
+.PHONY: all bonus clean fclean re
