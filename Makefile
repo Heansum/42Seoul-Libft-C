@@ -22,9 +22,9 @@ CC = gcc
 CFLAG = -Wall -Wextra -Werror
 
 ifdef WITH_BONUS
-OBJ = $(OBJ_A) $(OBJ_B)
+	OBJ = $(OBJ_A) $(OBJ_B)
 else
-OBJ = $(OBJ_A)
+	OBJ = $(OBJ_A)
 endif
 
 all : $(NAME)
