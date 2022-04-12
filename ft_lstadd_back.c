@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 13:51:58 by hlim              #+#    #+#             */
-/*   Updated: 2022/04/11 13:58:44 by hlim             ###   ########.fr       */
+/*   Updated: 2022/04/12 12:58:59 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 	else
 		ft_lstlast(*lst)->next = new;
-	return ;
 }
